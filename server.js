@@ -1,6 +1,7 @@
 var http = require('http');
 var fileSystem = require('fs');
 var server = http.createServer(function(req, resp){
+	var name
 	fileSystem.readFile('./index.html', function(error, fileContent){
 		if(error){
 			resp.writeHead(500, {'Content-Type': 'text/plain'});
